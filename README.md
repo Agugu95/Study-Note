@@ -32,3 +32,7 @@ JDBC 드라이버가 필요한데, 실제로는 JDBC 드라이버가 자바 어�
 당연히 DBMS가 하나만 존재하는 것이 아니니 내가 Oracle도 사용하고 싶고, MariaDB도 사용하고싶다면 전부 다른 JDBC 드라이버를 사용해야한다.  
 그래서 이를 보완하기 위해서 존재하는 것이  
 - 짜잔! ODBC  
+  
+  > 이외에 오늘 재정리한 것  
+  Call by Value(Refrance), (멀티)프로세스/(멀티)스레드, 포인터와 배열, GC, JVM, DeadLock, Mutex와 Semaphore, Serialization, Sync/Async,  
+  Blocking/Non-Blocking, OOP SOLID 원칙, Static/Non-Static, Over Loading/Riding, Interface/Abstract 
