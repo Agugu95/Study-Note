@@ -40,7 +40,18 @@ JDBC 드라이버가 필요한데, 실제로는 JDBC 드라이버가 자바 어�
 그리고 이걸 XML로 관리하자! 가 MyBatis의 목적인 것 같다.
 
 - JDBC와는 다른 ODBC  
-  
+ODBC는 Open DataBase Connectivity 뭐 대충 DB의 프리한 연결을 위한 것 같다.  
+앞서 말했듯이 RDB를 다루는 RDBMS는 여러개다.  
+RDBMS는 RDB와 SQL을 통한 통신을 통해 데이터를 관리하고, Application은 RDBMS와 통신을 통해  
+데이터를 간접적으로 컨트롤한다.  
+각 통신은 소켓을 통해 이루어지는데 문제는 JDBC에서 말했듯이 각 RDBMS마다 원하는 프로토콜이 다르다는 것  
+Oracle은 Oracle Driver가 필요하고, MS-SQL은 MS Driver, MySql은 Mysql Connector가 필요하니  이 얼마나 비효율적인가  
+그래서 나온게 ODBC API로 모든 RDBMS에서 동일하게 작동할 수 있는 API를 만든 것이다.  
+실제로는 각 RDBMS에 맞는 드라이버로 변환되지만 Application 단에서는 ODBC Driver가 제공해주는 API에 따라 코드를 작성하면 된다.  
+``` Application <-> ODBC Manager <-> RDBMS에 맞게 변환 되는 ODBC Driver <-> RDBMS```  
+그런데 이건 각 DBMS에서 ODBC Driver를 제공해주기에 DBMS가 설치되어있어야 한다고 한다...  내일 다시 볼 것
+
+
   > 이외에 0819 재정리한 것  
   Call by Value(Refrance), (멀티)프로세스/(멀티)스레드, 포인터와 배열, GC, JVM, DeadLock, Mutex와 Semaphore, Serialization, Sync/Async,  
   Blocking/Non-Blocking, OOP SOLID 원칙, Static/Non-Static, Over Loading/Riding, Interface/Abstract 
