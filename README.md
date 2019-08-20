@@ -34,7 +34,10 @@ JDBC 드라이버가 필요한데, 실제로는 JDBC 드라이버가 자바 어�
     
 **0820 추가**  
 실제로 JDBC의 경우에는 하나의 테이블을 조작한다고 했을 때 그 테이블을 조작하는 쿼리가 전부 소스코드 안에 들어가게 된다.  
->Mybatis와 JDBC는 뭐가 다른가? <https://hub.packtpub.com/why-mybatis/>  
+>Mybatis와 JDBC는 뭐가 다른가?   <https://hub.packtpub.com/why-mybatis/>  
+만약 JDBC를 이용해서 5번의 쿼리를 날리려고 한다면 코드 내에 5개의 쿼리가 남아있을거고....  
+각각 다른 클래스임에도 동일 쿼리가 존재하니 이를 한곳으로 모아서 빼자!    
+그리고 이걸 XML로 관리하자! 가 MyBatis의 목적인 것 같다.
 
 - JDBC와는 다른 ODBC  
   
